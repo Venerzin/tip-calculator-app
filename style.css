@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title {
+  display: inline-block;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  padding: 2rem;
+  color: hsl(186, 14%, 43%);
+}
+
+.c-app {
+  width: 100%;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 1.5rem;
+}
+
+.c-input label {
+  color: hsl(183, 12%, 38%);
+}
+
+.c-input input {
+  display: block;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: hsl(183, 100%, 15%);
+  text-align: right;
+
+  background-color: hsl(189, 41%, 97%);
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+}
+
+.c-input__bill {
+  background-image: url(images/icon-dollar.svg);
+}
+
+.c-select {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.c-select label {
+  color: hsl(183, 12%, 38%);
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.c-select__option {
+  width: 45%;
+  height: 3rem;
+  color: white;
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  margin-bottom: 0.75rem;
+}
+
+.c-select .custom {
+  font-weight: bold;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 12%, 38%);
+  margin-bottom: 1rem;
+}
+
+.c-input__number-people {
+  background-image: url(images/icon-person.svg);
+}
+
+.s-result {
+  margin-top: 1rem;
+  padding: 2rem 1rem 1rem;
+  border-radius: 10px;
+  background-color: hsl(183, 100%, 15%);
+}
+
+.s-amount {
+  margin-bottom: 2rem;
+}
+
+.s-amount,
+.s-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-app__amount-result,
+.c-app__total-result {
+  display: flex;
+  align-items: center;
+}
+
+.c-app__dollar-img {
+  width: 1rem;
+  margin-right: 0.2rem;
+}
+
+.c-app__tip-amount,
+.c-app__total {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: hsl(172, 67%, 45%);
+}
+
+.c-app__total-label p,
+.c-app__amount-label p {
+  font-size: 1.1rem;
+  color: white;
+}
+
+.c-app__total-label p:last-child,
+.c-app__amount-label p:last-child {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: hsl(183, 12%, 38%);
+}
+
+.c-app__btn-reset {
+  margin-top: 1rem;
+  height: 3rem;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(172, 67%, 45%);
+}
+
+.is-selected {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
