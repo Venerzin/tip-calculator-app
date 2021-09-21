@@ -59,6 +59,16 @@ body {
   background-image: url(images/icon-dollar.svg);
 }
 
+.c-input__bill:focus,
+.c-input__number-people:focus,
+.custom:focus {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px hsl(172, 67%, 45%);
+  outline: none;
+  transition: 0.1s;
+}
+
 .c-select {
   margin-top: 1rem;
   display: flex;
@@ -88,11 +98,21 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.c-select .custom {
+.c-select__option:hover {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+
+.custom {
+  width: 45%;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.25rem;
   font-weight: bold;
-  background-color: hsl(189, 41%, 97%);
+  background-color: hsl(0, 0%, 85%);
   color: hsl(183, 12%, 38%);
   margin-bottom: 1rem;
+  text-align: right;
 }
 
 .c-input__number-people {
@@ -157,9 +177,83 @@ body {
   font-weight: bold;
   color: hsl(183, 100%, 15%);
   background-color: hsl(172, 67%, 45%);
+  cursor: pointer;
+}
+
+.c-app__btn-reset:hover {
+  background-color: hsl(185, 41%, 84%);
 }
 
 .is-selected {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media screen and (min-width: 64rem) {
+  .c-app {
+    border-radius: 20px;
+    width: 48rem;
+    height: 27.5rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+
+    grid-template-areas:
+      "input-bill result"
+      "select-tip   result"
+      "input-people  result";
+  }
+
+  #input-bill {
+    grid-area: input-bill;
+  }
+
+  .c-select {
+    grid-area: select-tip;
+  }
+
+  #input-number-people {
+    grid-area: input-people;
+  }
+
+  .s-result {
+    grid-area: result;
+  }
+
+  .c-select__option {
+    width: 30%;
+  }
+
+  .custom {
+    width: 30%;
+  }
+
+  .s-result {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .c-app__tip-amount,
+  .c-app__total {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: hsl(172, 67%, 45%);
+  }
+
+  .c-app__btn-reset {
+    width: 80%;
+    position: absolute;
+    bottom: 2rem;
+    left: 10%;
+  }
 }
